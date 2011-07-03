@@ -1,7 +1,7 @@
 # mapping out new machine setup
 
 dep 'aruRawrSetup' do
-  requires 'OmniGraffle.app', 'Google Chrome.app', 'Firefox.app', 'YoruFukurou.app', 'CarbonCopyCloner.app', 'Colloquy.app', 'Kismac.app', 'Adium.app', 'TextExpander.app', 'Mactracker.app', 'ZimbraDesktop.installer', 'TextMate.app', 'nmap.installer'
+  requires 'OmniGraffle.app', 'Google Chrome.app', 'Firefox.app', 'YoruFukurou.app', 'Carbon Copy Cloner.app', 'Colloquy.app', 'Kismac.app', 'Adium.app', 'TextExpander.app', 'Mactracker.app', 'ZimbraDesktop.installer', 'TextMate.app', 'nmap.installer'
 end
 dep 'OmniGraffle.app' do
   source 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.5/OmniGrafflePro-5.2.3-English.dmg'
@@ -15,7 +15,7 @@ end
 dep 'YoruFukurou.app' do
   source 'http://aki-null.net/yf/YoruFukurou_SL.zip'
 end
-dep 'CarbonCopyCloner.app' do
+dep 'Carbon Copy Cloner.app' do
   source 'http://web.mac.com/bombich/ccc-3.3.7.dmg'
 end
 dep 'Colloquy.app' do
