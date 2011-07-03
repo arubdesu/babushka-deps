@@ -50,4 +50,4 @@ end
 # + ARD and ServerAdmin Tools from  dev site
 # + DeployStudio admin/runtime once I test new rev
 # + VPNTracker requires acct login to download, http://www.equinux.com/us/products/vpntracker/download.html
-# and I'm not clear on oddball files like  http://www.verticalforest.com/youtube5/YouTube5.safariextz
+# TODO: do a before mkdir for ~/Library/Extensions to add http://www.verticalforest.com/youtube5/YouTube5.safariextz
