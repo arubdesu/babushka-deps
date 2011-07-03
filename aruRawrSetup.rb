@@ -35,6 +35,10 @@ dep 'Mactracker.app' do
 end
 dep 'ZimbraDesktop.installer' do
   source 'http://files2.zimbra.com/downloads/zdesktop/7.0.1/b10791/zdesktop_7_0_1_b10791_macos_intel.dmg'
+  met? {
+      # Test that the actual .app bundle is in the right place.
+      '/Applications/Zimbra Desktop/Zimbra Desktop'.p.exist?
+    }
 end
 dep 'TextMate.app' do
   source 'http://download.macromates.com/TextMate_1.5.10.zip'
