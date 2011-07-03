@@ -1,7 +1,7 @@
 # mapping out new machine setup
 
 dep 'aruRawrSetup' do
-  requires 'OmniGraffle.app', 'Google Chrome.app', 'Firefox.app', 'VPNTracker.app', 'YoruFukurou.app', 'CarbonCopyCloner.app', 'Colloquy.app', 'Kismac.app', 'Adium.app', 'TextExpander.app', 'Mactracker.app', 'ZimbraDesktop.installer', 'TextMate.app', 'nmap.installer'
+  requires 'OmniGraffle.app', 'Google Chrome.app', 'Firefox.app', 'YoruFukurou.app', 'CarbonCopyCloner.app', 'Colloquy.app', 'Kismac.app', 'Adium.app', 'TextExpander.app', 'Mactracker.app', 'ZimbraDesktop.installer', 'TextMate.app', 'nmap.installer'
 end
 dep 'OmniGraffle.app' do
   source 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.5/OmniGrafflePro-5.2.3-English.dmg'
@@ -11,9 +11,6 @@ dep 'Google Chrome.app' do
 end
 dep 'Firefox.app' do
   source 'http://3347-mozilla.voxcdn.com/pub/mozilla.org/firefox/releases/5.0/mac/en-US/Firefox%205.0.dmg'
-end
-dep 'VPNTracker.app' do
-  source 'http://download.equinux.com/files/web/VPN_Tracker_6.2.3.dmg'
 end
 dep 'YoruFukurou.app' do
   source 'http://aki-null.net/yf/YoruFukurou_SL.zip'
@@ -50,4 +47,5 @@ end
 # http://support.apple.com/downloads/DL1097/en_US/iWork9.0.5Update.dmg
 # + ARD and ServerAdmin Tools from  dev site
 # + DeployStudio admin/runtime once I test new rev
+# + VPNTracker requires acct login to download, http://www.equinux.com/us/products/vpntracker/download.html
 # and I'm not clear on oddball files like  http://www.verticalforest.com/youtube5/YouTube5.safariextz
