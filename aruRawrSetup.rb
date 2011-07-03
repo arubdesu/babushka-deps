@@ -37,7 +37,7 @@ dep 'ZimbraDesktop.installer' do
   source 'http://files2.zimbra.com/downloads/zdesktop/7.0.1/b10791/zdesktop_7_0_1_b10791_macos_intel.dmg'
   met? {
       # Test that the actual .app bundle is in the right place.
-      '/Applications/Zimbra Desktop/Zimbra Desktop'.p.exist?
+      '/Applications/Zimbra Desktop/Zimbra Desktop'.p.exists?
     }
 end
 dep 'TextMate.app' do
