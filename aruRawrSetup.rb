@@ -46,6 +46,10 @@ dep 'nmap.installer' do
 end
 dep 'Growl.installer' do
   source 'http://growl.cachefly.net/Growl-1.2.2.dmg'
+  provides 'growlnotify'
+  # Test that the prefPane is in the right place.
+  # TODO: get HardwareGrowler out of Extras folder in DMG, add to login items, run, and hide dock icon
+  met? { "/Library/PreferencePanes/Growl.prefPane".p.exists? }
 end
 # + iWork from local network, 
 # http://support.apple.com/downloads/DL1097/en_US/iWork9.0.5Update.dmg
