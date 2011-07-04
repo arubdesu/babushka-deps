@@ -1,7 +1,7 @@
 # mapping out new machine setup
 
 dep 'aruRawrSetup' do
-  requires 'OmniGraffle.app', 'Google Chrome.app', 'Firefox.app', 'YoruFukurou.app', 'Carbon Copy Cloner.app', 'Colloquy.app', 'KisMAC.app', 'Adium.app', 'TextExpander.app', 'Mactracker.app', 'ZimbraDesktop.installer', 'TextMate.app', 'nmap.installer'
+  requires 'OmniGraffle.app', 'Google Chrome.app', 'Firefox.app', 'YoruFukurou.app', 'Carbon Copy Cloner.app', 'Colloquy.app', 'KisMAC.app', 'Adium.app', 'TextExpander.app', 'Mactracker.app', 'ZimbraDesktop.installer', 'TextMate.app', 'nmap.installer', 'Growl.installer'
 end
 dep 'OmniGraffle.app' do
   source 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.5/OmniGrafflePro-5.2.3-English.dmg'
@@ -44,7 +44,9 @@ end
 dep 'nmap.installer' do
   source 'http://nmap.org/dist/nmap-5.51.dmg'
 end
-
+dep 'Growl.installer' do
+  source 'http://growl.cachefly.net/Growl-1.2.2.dmg'
+end
 # + iWork from local network, 
 # http://support.apple.com/downloads/DL1097/en_US/iWork9.0.5Update.dmg
 # + ARD and ServerAdmin Tools from  dev site
