@@ -1,7 +1,7 @@
 # mapping out new machine setup
 
 dep 'aruRawrSetup' do
-  requires 'Google Chrome.app', 'Firefox.app', 'YoruFukurou.app', 'Carbon Copy Cloner.app', 'Colloquy.app', 'KisMAC.app', 'Adium.app', 'TextExpander.app', 'Mactracker.app', 'ZimbraDesktop.installer', 'TextMate.app', 'nmap.installer', 'Growl.installer', 'CrashPlan.installer'
+  requires 'Google Chrome.app', 'Firefox.app', 'YoruFukurou.app', 'Carbon Copy Cloner.app', 'Colloquy.app', 'KisMAC.app', 'Adium.app', 'TextExpander.app', 'Mactracker.app', 'ZimbraDesktop.installer', 'TextMate.app', 'nmap.installer', 'Growl.installer', 'CrashPlan.installer', 'Remote Desktop Connection.installer'
 end
 dep 'Google Chrome.app' do
   source 'https://dl-ssl.google.com/chrome/mac/stable/CHFA/googlechrome.dmg'
