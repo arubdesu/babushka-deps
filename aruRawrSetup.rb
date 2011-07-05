@@ -1,7 +1,7 @@
 # mapping out new machine setup
 
 dep 'aruRawrSetup' do
-  requires 'Google Chrome.app', 'Firefox.app', 'YoruFukurou.app', 'Carbon Copy Cloner.app', 'Colloquy.app', 'KisMAC.app', 'Adium.app', 'TextExpander.app', 'Mactracker.app', 'ZimbraDesktop.installer', 'TextMate.app', 'nmap.installer', 'Growl.installer', 'CrashPlan.installer', 'Remote Desktop Connection.installer'
+  requires 'Google Chrome.app', 'Firefox.app', 'YoruFukurou.app', 'Carbon Copy Cloner.app', 'Colloquy.app', 'KisMAC.app', 'Adium.app', 'TextExpander.app', 'Mactracker.app', 'ZimbraDesktop.installer', 'TextMate.app', 'nmap.installer', 'Growl.installer', 'CrashPlan.installer'
 end
 dep 'Google Chrome.app' do
   source 'https://dl-ssl.google.com/chrome/mac/stable/CHFA/googlechrome.dmg'
@@ -52,9 +52,11 @@ dep 'CrashPlan.installer' do
   source 'http://download.crashplan.com/installs/mac/install/CrashPlanPRO/CrashPlanPRO_2010-03-08_Mac.dmg'
   met? { "/Applications/CrashPlan.app".p.exists? }
 end
-dep 'Remote Desktop Connection.installer' do
-  source 'http://download.microsoft.com/download/C/F/0/CF0AE39A-3307-4D39-9D50-58E699C91B2F/RDC_2.1.1_ALL.dmg'
-end
+# This had some sort of version number bug
+# dep 'Remote Desktop Connection.installer' do
+#   source 'http://download.microsoft.com/download/C/F/0/CF0AE39A-3307-4D39-9D50-58E699C91B2F/RDC_2.1.1_ALL.dmg'
+# end
+# 
 # These both require license agreements before drag-drop
 # dep 'OmniGraffle.app' do
 #   source 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.5/OmniGrafflePro-5.2.3-English.dmg'
