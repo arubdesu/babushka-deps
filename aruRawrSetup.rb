@@ -71,3 +71,4 @@ end
 # + DeployStudio admin/runtime once I test new rev
 # + VPNTracker requires acct login to download, http://www.equinux.com/us/products/vpntracker/download.html
 # TODO: do a before mkdir for ~/Library/Extensions to add http://www.verticalforest.com/youtube5/YouTube5.safariextz
+# http://www.charlessoft.com/Pacifist_2.6.4.dmg
