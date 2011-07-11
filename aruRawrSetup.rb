@@ -52,6 +52,10 @@ dep 'CrashPlan.installer' do
   source 'http://download.crashplan.com/installs/mac/install/CrashPlanPRO/CrashPlanPRO_2010-03-08_Mac.dmg'
   met? { "/Applications/CrashPlan.app".p.exists? }
 end
+dep 'VirtualBox.installer' do
+  source 'http://download.virtualbox.org/virtualbox/4.0.10/VirtualBox-4.0.10-72479-OSX.dmg'
+end
+
 # This had some sort of version number bug
 # dep 'Remote Desktop Connection.installer' do
 #   source 'http://download.microsoft.com/download/C/F/0/CF0AE39A-3307-4D39-9D50-58E699C91B2F/RDC_2.1.1_ALL.dmg'
@@ -72,3 +76,4 @@ end
 # + VPNTracker requires acct login to download, http://www.equinux.com/us/products/vpntracker/download.html
 # TODO: do a before mkdir for ~/Library/Extensions to add http://www.verticalforest.com/youtube5/YouTube5.safariextz
 # http://www.charlessoft.com/Pacifist_2.6.4.dmg
+# http://download.microsoft.com/download/A/A/7/AA7AB701-B35D-4EA7-A02A-BAAD536EA8CF/Microsoft%20Mouse_d291.dmg
