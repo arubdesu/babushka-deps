@@ -26,7 +26,7 @@ meta 'eula_app' do
 end
 
 dep 'aruRawrSetup' do
-  requires 'Firefox.app', 'Google Chrome.app', 'Remote Desktop Connection.installer', 'ScreenSharingMenulet.app', 'OmniGraffle Professional 5.app', 'Server Admin Tools.installer', 'Carbon Copy Cloner.app', 'Adium.app', 'VirtualBox.installer', 'nmap.installer', 'OmniDiskSweeper.app', 'Mactracker.app', 'TextMate.app', 'TextExpander.app',
+  requires 'Firefox.app', 'Google Chrome.app', 'Remote Desktop Connection.installer', 'ScreenSharingMenulet.app', 'Server Admin Tools.installer', 'Carbon Copy Cloner.app', 'Adium.app', 'VirtualBox.installer', 'nmap.installer', 'Mactracker.app', 'TextMate.app', 'TextExpander.app'
 end
 dep 'Firefox.app' do
   source 'http://mirrors.coreix.net/mozilla/firefox/releases/10.0.2/mac/en-US/Firefox%2010.0.2.dmg'
@@ -34,20 +34,21 @@ end
 dep 'Google Chrome.app' do
   source 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
 end
-#dep 'Remote Desktop Connection.installer' do
-#  source 'http://download.microsoft.com/download/C/F/0/CF0AE39A-3307-4D39-9D50-58E699C91B2F/RDC_2.1.1_ALL.dmg'
-#  met? { "/Applications/Remote Desktop Connection.app".p.exists? }
-#end
+dep 'Remote Desktop Connection.installer' do
+ source 'http://download.microsoft.com/download/C/F/0/CF0AE39A-3307-4D39-9D50-58E699C91B2F/RDC_2.1.1_ALL.dmg'
+ met? { "/Applications/Remote Desktop Connection.app".p.exists? }
+end
 dep 'ScreenSharingMenulet.app' do
   source 'http://www.klieme.com/Downloads/ScreenSharingMenulet/ScreenSharingMenulet_2.2.zip'
 end
 # OmniGroup Products require EULA acceptance
-dep 'OmniGraffle Professional 5.app', :template => 'eula_app' do
-  source 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.5/OmniGrafflePro-5.3.6-English.dmg'
-  dmg_name 'OmniGrafflePro-5.3.6.dmg'
-end
+# dep 'OmniGraffle Professional 5.app', :template => 'eula_app' do
+#   source 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.5/OmniGrafflePro-5.3.6-English.dmg'
+#   dmg_name 'OmniGrafflePro-5.3.6.dmg'
+# end
 dep 'Server Admin Tools.installer' do
   source 'http://support.apple.com/downloads/DL1488/en_US/AdminTools10.7.3.dmg'
+  met? { "/Applications/Server".p.exists? }
 end
 dep 'Carbon Copy Cloner.app' do
   source 'http://web.mac.com/bombich/ccc-3.4.4.dmg'
@@ -73,10 +74,10 @@ end
 
 
 
-dep 'OmniDiskSweeper.app', :template => 'eula_app' do
-  source 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.4/OmniDiskSweeper-1.7.2.dmg'
-  dmg_name 'OmniGrafflePro-5.3.3.dmg'
-end
+# dep 'OmniDiskSweeper.app', :template => 'eula_app' do
+#   source 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.4/OmniDiskSweeper-1.7.2.dmg'
+#   dmg_name 'OmniGrafflePro-5.3.3.dmg'
+# end
 #
 # + iWork from local network, 
 # http://support.apple.com/downloads/DL1097/en_US/iWork9.0.5Update.dmg
