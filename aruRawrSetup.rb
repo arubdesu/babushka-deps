@@ -26,7 +26,7 @@ meta 'eula_app' do
 end
 
 dep 'aruRawrSetup' do
-  requires 'Firefox.app', 'Google Chrome.app', 'Remote Desktop Connection.installer', 'ScreenSharingMenulet.app', 'Server Admin Tools.installer', 'Carbon Copy Cloner.app', 'Adium.app', 'VirtualBox.installer', 'nmap.installer', 'Mactracker.app', 'TextMate.app', 'TextExpander.app'
+  requires 'Firefox.app', 'Google Chrome.app', 'Remote Desktop Connection.installer', 'ScreenSharingMenulet.app', 'Server Admin Tools.installer', 'Carbon Copy Cloner.app', 'VirtualBox.installer', 'nmap.installer', 'TextWrangler.app', 'Mactracker.app', 'LimeChat.app', 'iStumbler.app', 'Adium.app', 'DeployStudio.installer', 'Fluid.app', '1Password.app',  'TextMate.app', 'TextExpander.app', 'Pacifist.app', 'MicrosoftMouse.installer', 'Dropbox.app'
 end
 dep 'Firefox.app' do
   source 'http://mirrors.coreix.net/mozilla/firefox/releases/10.0.2/mac/en-US/Firefox%2010.0.2.dmg'
@@ -41,11 +41,6 @@ end
 dep 'ScreenSharingMenulet.app' do
   source 'http://www.klieme.com/Downloads/ScreenSharingMenulet/ScreenSharingMenulet_2.2.zip'
 end
-# OmniGroup Products require EULA acceptance
-# dep 'OmniGraffle Professional 5.app', :template => 'eula_app' do
-#   source 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.5/OmniGrafflePro-5.3.6-English.dmg'
-#   dmg_name 'OmniGrafflePro-5.3.6.dmg'
-# end
 dep 'Server Admin Tools.installer' do
   source 'http://support.apple.com/downloads/DL1488/en_US/AdminTools10.7.3.dmg'
   met? { "/Applications/Server".p.exists? }
@@ -53,27 +48,57 @@ end
 dep 'Carbon Copy Cloner.app' do
   source 'http://web.mac.com/bombich/ccc-3.4.4.dmg'
 end
-dep 'Adium.app' do
-  source 'http://download.adium.im/Adium_1.4.4.dmg'
-end
 dep 'VirtualBox.installer' do
   source 'http://download.virtualbox.org/virtualbox/4.1.8/VirtualBox-4.1.8-75467-OSX.dmg'
 end
 dep 'nmap.installer' do
   source 'http://nmap.org/dist/nmap-5.51.dmg'
 end
-dep 'TextExpander.app' do
-  source 'http://cdn.smilesoftware.com/TextExpander_3.3.0.1.zip'
+dep 'TextWrangler.app' do
+  source 'http://pine.barebones.com/freeware/TextWrangler_3.5.3.dmg'
 end
 dep 'Mactracker.app' do
   source 'http://www.mactracker.ca/downloads/Mactracker_6.0.2.zip'
 end
+dep 'LimeChat.app' do
+  source 'http://cloud.github.com/downloads/psychs/limechat/LimeChat_2.30.tbz'
+end
+dep 'iStumbler.app' do
+  source 'http://www.istumbler.net/beta/istumbler-100gmc3.zip'
+end
+dep 'Adium.app' do
+  source 'http://download.adium.im/Adium_1.4.4.dmg'
+end
+dep 'DeployStudio.installer' do
+  source 'http://www.deploystudio.com/Downloads/DeployStudioServer_NB120203.dmg'
+end
+dep 'Fluid.app' do
+  source 'http://fluidapp.com/dist/Fluid_1.3.zip'
+end
+dep '1Password.app' do
+  source 'https://d13itkw33a7sus.cloudfront.net/dist/1P/mac/1Password-3.8.17.zip'
+end
 dep 'TextMate.app' do
   source 'http://download.macromates.com/TextMate_1.5.10.zip'
 end
+dep 'TextExpander.app' do
+  source 'http://cdn.smilesoftware.com/TextExpander_3.4.2.zip'
+end
+dep 'Pacifist.app' do
+  source 'http://www.charlessoft.com/pacifist_download/Pacifist_3.0.2.zip'
+end
+dep 'MicrosoftMouse.installer' do
+  source 'http://download.microsoft.com/download/B/1/0/B109F931-70E2-425F-8681-EAAB75845AB8/Microsoft-Mouse_d305.dmg'
+end
+dep 'Dropbox.app' do
+  source 'https://ddr3luum8vl5r.cloudfront.net/Dropbox%201.2.52.dmg'
+end
 
-
-
+# OmniGroup Products require EULA acceptance
+# dep 'OmniGraffle Professional 5.app', :template => 'eula_app' do
+#   source 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.5/OmniGrafflePro-5.3.6-English.dmg'
+#   dmg_name 'OmniGrafflePro-5.3.6.dmg'
+# end
 # dep 'OmniDiskSweeper.app', :template => 'eula_app' do
 #   source 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.4/OmniDiskSweeper-1.7.2.dmg'
 #   dmg_name 'OmniGrafflePro-5.3.3.dmg'
