@@ -34,10 +34,10 @@ end
 dep 'Google Chrome.app' do
   source 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
 end
-dep 'Remote Desktop Connection.installer' do
-  source 'http://download.microsoft.com/download/C/F/0/CF0AE39A-3307-4D39-9D50-58E699C91B2F/RDC_2.1.1_ALL.dmg'
-  met? { "/Applications/Remote Desktop Connection.app".p.exists? }
-end
+#dep 'Remote Desktop Connection.installer' do
+#  source 'http://download.microsoft.com/download/C/F/0/CF0AE39A-3307-4D39-9D50-58E699C91B2F/RDC_2.1.1_ALL.dmg'
+#  met? { "/Applications/Remote Desktop Connection.app".p.exists? }
+#end
 dep 'ScreenSharingMenulet.app' do
   source 'http://www.klieme.com/Downloads/ScreenSharingMenulet/ScreenSharingMenulet_2.2.zip'
 end
