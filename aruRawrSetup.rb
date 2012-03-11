@@ -1,4 +1,4 @@
-# updated, eula-accept dmg handling thanks to j2fly, https://github.com/benhoskings/babushka/issues/136#issuecomment-2177849
+# eula-accept dmg handling didn't work, https://github.com/benhoskings/babushka/issues/136#issuecomment-2177849
 
 meta 'eula_app' do
   accepts_value_for :app_name, :basename
@@ -26,7 +26,7 @@ meta 'eula_app' do
 end
 
 dep 'aruRawrSetup' do
-  requires 'Firefox.app', 'Google Chrome.app', 'Remote Desktop Connection.installer', 'ScreenSharingMenulet.app', 'Server Admin Tools.installer', 'Carbon Copy Cloner.app', 'VirtualBox.installer', 'nmap.installer', 'TextWrangler.app', 'Mactracker.app', 'LimeChat.app', 'iStumbler.app', 'Adium.app', 'DeployStudio.installer', 'Fluid.app', '1Password.app',  'TextMate.app', 'TextExpander.app', 'Pacifist.app', 'MicrosoftMouse.installer', 'Dropbox.app'
+  requires 'Firefox.app', 'Google Chrome.app', 'Remote Desktop Connection.installer', 'ScreenSharingMenulet.app', 'Server Admin Tools.installer', 'Carbon Copy Cloner.app', 'VirtualBox.installer', 'nmap.installer', 'TextWrangler.app', 'Mactracker.app', 'LimeChat.app', 'iStumbler.app', 'Adium.app', 'Fluid.app', '1Password.app',  'textmate', 'TextExpander.app', 'Pacifist.app', 'MicrosoftMouse.installer', 'Dropbox.app', 'GoogleAppEngineLauncher.app'
 end
 dep 'Firefox.app' do
   source 'http://mirrors.coreix.net/mozilla/firefox/releases/10.0.2/mac/en-US/Firefox%2010.0.2.dmg'
@@ -69,14 +69,19 @@ end
 dep 'Adium.app' do
   source 'http://download.adium.im/Adium_1.4.4.dmg'
 end
-dep 'DeployStudio.installer' do
-  source 'http://www.deploystudio.com/Downloads/DeployStudioServer_NB120203.dmg'
-end
 dep 'Fluid.app' do
   source 'http://fluidapp.com/dist/Fluid_1.3.zip'
 end
 dep '1Password.app' do
   source 'https://d13itkw33a7sus.cloudfront.net/dist/1P/mac/1Password-3.8.17.zip'
+end
+dep 'textmate' do
+  requires 'TextMate.app', 'textmate helper'
+end
+dep 'textmate helper' do
+  requires 'TextMate.app'
+  met? { which 'mate' }
+  meet { shell "ln -sf '#{app_dir('TextMate.app') / 'Contents/SharedSupport/Support/bin/mate'}' /usr/local/bin/mate" }
 end
 dep 'TextMate.app' do
   source 'http://download.macromates.com/TextMate_1.5.10.zip'
@@ -89,11 +94,18 @@ dep 'Pacifist.app' do
 end
 dep 'MicrosoftMouse.installer' do
   source 'http://download.microsoft.com/download/B/1/0/B109F931-70E2-425F-8681-EAAB75845AB8/Microsoft-Mouse_d305.dmg'
+  met? { "/Applications/Utilities/IntelliPoint UnInstaller.app".p.exists? }
 end
 dep 'Dropbox.app' do
   source 'https://ddr3luum8vl5r.cloudfront.net/Dropbox%201.2.52.dmg'
 end
-
+dep 'GoogleAppEngineLauncher.app' do
+  source 'http://googleappengine.googlecode.com/files/GoogleAppEngineLauncher-1.6.3.dmg'
+end
+# babushka is installing _all_ sub-packages, and therefore unistalling...
+# dep 'DeployStudio.installer' do
+#   source 'http://www.deploystudio.com/Downloads/DeployStudioServer_NB120203.dmg'
+# end
 # OmniGroup Products require EULA acceptance
 # dep 'OmniGraffle Professional 5.app', :template => 'eula_app' do
 #   source 'http://www.omnigroup.com/ftp1/pub/software/MacOSX/10.5/OmniGrafflePro-5.3.6-English.dmg'
