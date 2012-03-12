@@ -26,7 +26,7 @@ meta 'eula_app' do
 end
 
 dep 'aruRawrSetup' do
-  requires 'Firefox.app', 'Google Chrome.app', 'Remote Desktop Connection.installer', 'ScreenSharingMenulet.app', 'Server Admin Tools.installer', 'Carbon Copy Cloner.app', 'VirtualBox.installer', 'nmap.installer', 'TextWrangler.app', 'Mactracker.app', 'LimeChat.app', 'iStumbler.app', 'Adium.app', 'Fluid.app', '1Password.app',  'textmate', 'TextExpander.app', 'Pacifist.app', 'MicrosoftMouse.installer', 'Dropbox.app', 'GoogleAppEngineLauncher.app'
+  requires 'Firefox.app', 'Google Chrome.app', 'Remote Desktop Connection.installer', 'ScreenSharingMenulet.app', 'Server Admin Tools.installer', 'Carbon Copy Cloner.app', 'VirtualBox.installer', 'nmap.installer', 'TextWrangler.app', 'Mactracker.app', 'LimeChat.app', 'iStumbler.app', 'Adium.app', 'Fluid.app', '1Password.app',  'textmate', 'TextExpander.app', 'Pacifist.app', 'MicrosoftMouse.installer', 'Dropbox.app', 'GoogleAppEngineLauncher.app', 'MarsEdit.app'
 end
 dep 'Firefox.app' do
   source 'http://mirrors.coreix.net/mozilla/firefox/releases/10.0.2/mac/en-US/Firefox%2010.0.2.dmg'
@@ -101,6 +101,9 @@ dep 'Dropbox.app' do
 end
 dep 'GoogleAppEngineLauncher.app' do
   source 'http://googleappengine.googlecode.com/files/GoogleAppEngineLauncher-1.6.3.dmg'
+end
+dep 'MarsEdit.app' do
+  source 'http://www.red-sweater.com/marsedit/MarsEdit3.4.4.zip'
 end
 # babushka is installing _all_ sub-packages, and therefore unistalling...
 # dep 'DeployStudio.installer' do
